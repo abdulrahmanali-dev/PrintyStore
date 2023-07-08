@@ -1,0 +1,28 @@
+.timer {
+  background-color: #2872f8;
+}
+.timer .image {
+  width: 300px;
+  margin: auto;
+}
+@media (min-width: 768px) {
+  .timer .image {
+    margin-left: auto;
+  }
+}
+.timer .time-wrapper {
+  padding: 20px 0;
+}
+.timer .title {
+  font-size: 17px;
+}
+.timer .btn {
+  background-color: white !important;
+  padding: 12px 20px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.timer .btn:hover {
+  border: solid 1px #2872f8;
+  color: black;
+}/*# sourceMappingURL=timer.css.map */

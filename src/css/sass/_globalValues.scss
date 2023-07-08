@@ -1,0 +1,98 @@
+@use "./variables" as *;
+
+/*  css variables */
+:root {
+  --card-bg-01: #fdefe6;
+  --card-bg-02: #d6e5fb;
+  --card-bg-03: #ceebe9;
+  --card-bg-04: #e2f2b2;
+  --primary-color: #0a1d37;
+  --hero-bg: #d6e5fb;
+  --heading-fontSize: 2rem;
+  --small-text-color: #999;
+  --heading-text-color: #0a1d37;
+}
+
+/* reset browser default */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: unset;
+  
+  &:hover {
+    color: unset;
+
+  }
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+section {
+  padding: 60px 0;
+}
+.heading {
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 40px;
+  color: $text_color;
+}
+.btn-awesome {
+  background: linear-gradient(to right, $main-color, $secondery_color);
+  color: white;
+  font-weight: bold;
+  padding: 12px 20px;
+  font-size: 18px;
+  width: fit-content;
+  transition: 0.5s;
+  border: none;
+  &:hover {
+    transform: scale(1.05);
+    color: white;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    padding: 0 100px;
+  }
+}
+
+.fa-facebook {
+  color: #3a5a99;
+}
+.fa-whatsapp {
+  color: #62cf6d;
+}
+.fa-linkedin {
+  color: #0076b2;
+}
+
+.fa-twitter {
+  color: #55acee;
+}
+.fa-instagram {
+  color: #E4405F;
+}

@@ -1,0 +1,71 @@
+@use "../variables" as *;
+
+.product-card {
+  max-width: 250px !important;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: $shadow;
+  transition: 0.3s all ease;
+  background-color: $bg-color;
+  position: relative;
+  span svg {
+    position: absolute;
+    transition: 0.3s;
+    font-size: 20px;
+    color: $main-color;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.1);
+    }
+    right: 0;
+    top: 0;
+    padding: 4px 10px;
+  }
+  img {
+    border-radius: 0;
+  }
+  .card-title {
+    font-size: 17px;
+  }
+  .btn {
+    position: relative;
+    border-radius: 4px;
+    border: 2px solid $main_color;
+    font-size: 14px;
+    width: fit-content;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0px;
+      right: 0;
+      z-index: -1;
+      background: $gradient;
+      transition: transform 0.3s ease-in-out;
+      transform: scaleX(0);
+      transform-origin: left;
+    }
+    &:hover {
+      color: white !important;
+      &:before {
+        transform: scaleX(1);
+      }
+      svg {
+        color: white;
+      }
+    }
+    svg {
+      font-size: 16px;
+    }
+  }
+  &:hover {
+    transform: translatey(-10px);
+  }
+  h5 {
+    font-weight: bold;
+  }
+  p {
+    text-align: center;
+  }
+}

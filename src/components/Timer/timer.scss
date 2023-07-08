@@ -1,0 +1,30 @@
+@use "../../css/sass/variables" as *;
+
+.timer {
+  background-color: $main-color;
+  //   height: 40vh;
+  .image {
+    width: 300px;
+    // width: 250px;
+    margin: auto;
+    @media (min-width: 768px) {
+      margin-left: auto;
+    }
+  }
+  .time-wrapper {
+    padding: 20px 0;
+  }
+  .title {
+    font-size: 17px;
+  }
+  .btn {
+    background-color: white !important;
+    padding: 12px 20px;
+    font-weight: bold;
+    transition: .3s;
+    &:hover {
+        border: solid 1px $main-color;
+        color: black;
+    }
+  }
+}

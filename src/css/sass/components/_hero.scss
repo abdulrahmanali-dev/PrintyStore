@@ -1,0 +1,35 @@
+@use "../variables" as *;
+.hero {
+  min-height: 100vh;
+  background: center center no-repeat;
+  background-size: cover;
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+  }
+  .info {
+    z-index: 2;
+    svg {
+      color: white;
+      font-size: 70px;
+    }
+    h2 {
+      font-weight: bold;
+      font-size: 70px;
+      color: $main-color
+    }
+    P {
+      color: white;
+      max-width: 400px;
+      @media (max-width: 767px) {
+      }
+    }
+  }
+}

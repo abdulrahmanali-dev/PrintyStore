@@ -1,0 +1,46 @@
+@use "../variables" as *;
+.free-shipping {
+  background-color: $bg_color;
+  .row {
+    padding: 10px ;
+  }
+  .title {
+    padding: 0;
+    border-bottom: solid 2px #ddd;
+    padding-bottom: 20px;
+    @media (min-width: 992px) {
+      border-bottom: none;
+      border-right: solid 2px #ddd;
+    }
+    h2 {
+      font-weight: bold;
+      font-size: 35px;
+      @media (min-width: 576px) {
+        font-size: 40px;
+      }
+      @media (max-width: 992px) {
+        font-size: 45px;
+      }
+      color: $heading_color;
+    }
+  }
+  .desc {
+    .icons {
+      padding: 10px 0;
+      display: flex;
+      flex-direction: row;
+      .icon {
+        width: 30px;
+      }
+    }
+    padding: 0;
+    padding-top: 15px;
+    @media (min-width: 992px) {
+      padding: 0;
+      padding-left: 100px;
+    }
+    p {
+      color: $text_color;
+    }
+  }
+}

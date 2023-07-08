@@ -1,0 +1,19 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
+	<title>New Project</title>
+	<defs>
+		<linearGradient id="g1" x1="240.1" y1="-4.5" x2="64" y2="-79.3" gradientUnits="userSpaceOnUse">
+			<stop offset="0" stop-color="#6717cd"/>
+			<stop offset="1" stop-color="#2871fa"/>
+		</linearGradient>
+		<image  width="400" height="200" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAADIAQMAAAD82yWhAAAAAXNSR0IB2cksfwAAAANQTFRFAAAAp3o92gAAAAF0Uk5TAEDm2GYAAAAhSURBVHic7cExAQAAAMKg9U9tDQ+gAAAAAAAAAAAAgBcDJ9gAAQgr3RIAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+		tspan { white-space:pre } 
+		.t0 { font-size: 38px;text-transform: uppercase;fill:  url(#g1);font-family: "Impact" } 
+	</style>
+	<text id="printy copy" style="transform: matrix(2.823,0,0,2.823,47.934,141.892)" >
+		<tspan x="0" y="0" class="t0">PRINTY
+</tspan>
+	</text>
+	<use id="Background" href="#img1" x="0" y="0"/>
+</svg>
