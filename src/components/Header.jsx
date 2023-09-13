@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../css/App.css";
+import "../css/App.css";
 import { Link, NavLink } from "react-router-dom";
 const Header = () => {
   const [active, setActive] = useState("navbar-menu");
@@ -18,7 +18,7 @@ const Header = () => {
     <header>
       <div className="container">
         <NavLink to="/" className="logo">
-          <img src={require("../../assets/images/logo.webp")} />
+          <img src={require("../assets/images/logo.webp")} />
         </NavLink>
         <nav class={active}>
           <NavLink to="home">Home</NavLink>

@@ -11,17 +11,17 @@ const FreeShipping = () => {
           <div className="desc col-12 col-lg-6">
             <div className="icons">
               <div className="icon">
-              <img src={require("../../assets/images/user-1.png")} alt="" />
+              <img src={require("../assets/images/user-1.png")} alt="" />
               </div>
               <div className="icon">
-              <img src={require("../../assets/images/user-2.png")} alt="" />
+              <img src={require("../assets/images/user-2.png")} alt="" />
               </div>
 
               <div className="icon">
-              <img src={require("../../assets/images/user-3.png")} alt="" />
+              <img src={require("../assets/images/user-3.png")} alt="" />
               </div>
               <div className="icon">
-              <img src={require("../../assets/images/user-4.png")} alt="" />
+              <img src={require("../assets/images/user-4.png")} alt="" />
               </div>
             </div>
             <p>

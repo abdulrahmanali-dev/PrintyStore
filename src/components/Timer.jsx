@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "./timer.css";
 import { Container, Row } from "reactstrap";
 import { Link } from "react-router-dom";
 const Timer = () => {
@@ -9,7 +8,7 @@ const Timer = () => {
   const [seconds, setSeconds] = useState();
   let interval;
   const countDown = () => {
-    const distination = new Date("june 1, 2023").getTime();
+    const distination = new Date("june 1, 2024").getTime();
 
     interval = setInterval(() => {
       const now = new Date().getTime();
@@ -70,7 +69,7 @@ const Timer = () => {
           <div className="col-12 col-md-6 d-none d-md-block">
             <div className="image">
               <img
-                src={require("../../assets/images/products/posters/poster-1.webp")}
+                src={require("../assets/images/products/posters/poster-1.webp")}
               />
             </div>
           </div>

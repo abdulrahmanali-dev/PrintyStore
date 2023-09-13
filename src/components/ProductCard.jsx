@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { cartActions } from "../../redux/slices/cartSlice";
+import { cartActions } from "../redux/slices/cartSlice";
 
 const ProductCard = (props) => {
   const dispatch = useDispatch();
@@ -33,16 +33,16 @@ const ProductCard = (props) => {
           Start From <b>10$</b>
         </p>
       </div>
-      <div class="btn-container card-body d-flex justify-content-evenly">
+      <div class="btn-container card-body ">
         <Link
           to="/product/id"
-          class="btn d-flex justify-content-center align-items-center gap-2"
+          class="my-btn"
         >
           <i class="fas fa-shop"></i>
           <span>Product</span>
         </Link>
         <div
-          class="btn d-flex justify-content-center align-items-center gap-2"
+          class="my-btn"
           onClick={addToCart}
         >
           <i class="fa fa-plus" aria-hidden="true"></i>

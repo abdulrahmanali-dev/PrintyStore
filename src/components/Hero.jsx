@@ -6,7 +6,7 @@ const Hero = () => {
    style={{
     backgroundImage:
      "url(" +
-     require("../../assets/images/products/packs/all-products.webp") +
+     require("../assets/images/products/packs/all-products.webp") +
      ")",
    }}
   >

@@ -9,7 +9,7 @@ const About = () => {
         <Row>
           <Col lg="6" md="12">
             <img
-              src={require("../../assets/images/products/packs/collection.webp")}
+              src={require("../assets/images/products/packs/collection.webp")}
             />
           </Col>
           <Col lg="6" md="12">

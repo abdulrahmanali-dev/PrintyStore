@@ -1,12 +1,12 @@
 import React from "react";
-import Hero from "../components/Hero/Hero";
-import Features from "../components/Features/Features";
-import About from "../components/About/About";
-import FreeShipping from "../components/FreeShipping/FreeShipping";
-import FeaturedProduct from "../components/FeaturedProduct/FeaturedProduct";
-import NewArrivals from "../components/NewArrivals/NewArrivals";
-import Helmet from "../components/Helmet/Helmet";
-import Timer from "../components/Timer/Timer";
+import Hero from "../components/Hero";
+import Features from "../components/Features";
+import About from "../components/About";
+import FreeShipping from "../components/FreeShipping";
+import FeaturedProduct from "../components/FeaturedProduct";
+import NewArrivals from "../components/NewArrivals";
+import Helmet from "../components/Helmet";
+import Timer from "../components/Timer";
 // import Header from "../components/Header";
 const Home = () => {
   return (

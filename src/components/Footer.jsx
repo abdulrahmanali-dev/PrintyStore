@@ -67,7 +67,7 @@ const Footer = () => {
                   <div class="image">
                     <img
                       className="logo-footer"
-                      src={require("../../assets/images/logo.webp")}
+                      src={require("../assets/images/logo.webp")}
                       alt=""
                     />
                   </div>
@@ -193,7 +193,7 @@ const Footer = () => {
                     {/* <img src="./images/logo_negative2.svg" alt="" /> */}
                     <img
                       className="logo-footer"
-                      src={require("../../assets/images/logo.webp")}
+                      src={require("../assets/images/logo.webp")}
                       alt=""
                     />
                   </div>
