@@ -69,7 +69,7 @@ const Timer = () => {
           <div className="col-12 col-md-6 d-none d-md-block">
             <div className="image">
               <img
-                src={require("../assets/images/products/posters/poster-1.webp")}
+                src={require("../../assets/images/products/posters/poster-1.webp")}
               />
             </div>
           </div>

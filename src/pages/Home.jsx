@@ -6,7 +6,7 @@ import FreeShipping from "../components/FreeShipping";
 import FeaturedProduct from "../components/FeaturedProduct";
 import NewArrivals from "../components/NewArrivals";
 import Helmet from "../components/Helmet";
-import Timer from "../components/Timer";
+import Timer from "../components/UI/Timer";
 // import Header from "../components/Header";
 const Home = () => {
   return (

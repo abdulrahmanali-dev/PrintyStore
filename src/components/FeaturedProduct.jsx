@@ -1,7 +1,7 @@
 import React from "react";
 import { Container } from "reactstrap";
 import products from "../assets/data/products";
-import ProductCard from "./ProductCard";
+import ProductCard from "./UI/ProductCard";
 
 const FeaturedProduct = (item, index) => {
   return (
