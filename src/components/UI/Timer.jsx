@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row } from "reactstrap";
 import { Link } from "react-router-dom";
+import poster1  from "../../assets/images/products/posters/poster-1.webp";
+
+
+
 const Timer = () => {
   const [days, setDays] = useState();
   const [hours, setHours] = useState();
@@ -69,7 +73,7 @@ const Timer = () => {
           <div className="col-12 col-md-6 d-none d-md-block">
             <div className="image">
               <img
-                src={require("../../assets/images/products/posters/poster-1.webp")}
+                src={poster1}
               />
             </div>
           </div>

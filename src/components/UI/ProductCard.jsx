@@ -30,7 +30,7 @@ const ProductCard = (props) => {
           <Link>{props.products.productName}</Link>
         </h5>
         <p class="card-text ">
-          Start From <b>10$</b>
+          Price Is <b>{props.products.price} sp</b>
         </p>
       </div>
       <div class="btn-container card-body ">

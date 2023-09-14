@@ -1,6 +1,12 @@
 import React, { useState } from "react";
-import "../css/App.css";
 import { Link, NavLink } from "react-router-dom";
+// css
+import "../css/App.css";
+// images
+import logo from "../assets/images/logo.webp";
+import userImg from "../assets/images/user-1.png";
+import { motion } from "framer-motion";
+
 const Header = () => {
  const [active, setActive] = useState("navbar-menu");
  const navbarToggle = () => {
@@ -9,24 +15,29 @@ const Header = () => {
    : setActive("navbar-menu");
   console.log("object");
  };
-
  window.onscroll = () => {
   setActive("navbar-menu");
  };
-
+ const navLinks = [
+  { path: "home", display: "Home" },
+  { path: "products", display: "Products" },
+  { path: "contact", display: "Contact" },
+ ];
  return (
   <header>
    <div className="container">
     <NavLink to="/" className="logo">
-     <img src={require("../assets/images/logo.webp")} />
+     <img src={logo} alt="logo" />
     </NavLink>
     <nav class={active}>
-     <NavLink to="home">Home</NavLink>
+     {navLinks.map((item) => (
+      <NavLink to={item.path}>{item.display}</NavLink>
+     ))}
+     {/* <NavLink to="/">Home</NavLink>
      <NavLink to="products">Products</NavLink>
-     <NavLink to="contact">Contact</NavLink>
+     <NavLink to="contact">Contact</NavLink> */}
     </nav>
     <div class="icons">
-  
      <div className="icon">
       <Link to="/fav">
        <i className="fas fa-heart"></i>
@@ -46,10 +57,7 @@ const Header = () => {
        data-bs-toggle="dropdown"
        aria-expanded="false"
       >
-       <Link to="/shop">
-        <i className="fas fa-user-circle fa-4x"></i>
-       </Link>
-       <span>2</span>
+       <motion.img whileTap={{ scale: 1.1 }} src={userImg} alt="user" />
       </button>
       <ul class="dropdown-menu">
        <li>

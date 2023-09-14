@@ -1,23 +1,27 @@
 import React from "react";
+import { Route, Routes, Navigate } from "react-router-dom";
+// Pages
 import Home from "../pages/Home";
 import Checkout from "../pages/Checkout";
 import Login from "../pages/Login";
 import ProductDetailes from "../pages/ProductDetailes";
 import Shop from "../pages/Shop";
 import Cart from "../pages/Cart";
-import { Route, Routes } from "react-router-dom";
+import Error from "../pages/Error";
 
 const routers = () => {
-  return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="shop" element={<Shop/>} />
-      <Route path="checkout" element={<Checkout />} />
-      <Route path="login" element={<Login />} />
-      <Route path="shop/:id" element={<ProductDetailes />} />
-      <Route path="cart" element={<Cart />} />
-    </Routes>
-  );
+ return (
+  <Routes>
+   <Route path="/" element={<Navigate to="Home" />} />
+   <Route path="home" element={<Home />} />
+   <Route path="shop" element={<Shop />} />
+   <Route path="checkout" element={<Checkout />} />
+   <Route path="login" element={<Login />} />
+   <Route path="shop/:id" element={<ProductDetailes />} />
+   <Route path="cart" element={<Cart />} />
+   <Route path="*" element={<Error />} />
+  </Routes>
+ );
 };
 
 export default routers;

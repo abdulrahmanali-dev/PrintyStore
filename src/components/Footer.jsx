@@ -1,5 +1,5 @@
 import React from "react";
-
+import logo from '../assets/images/logo.webp'
 const Footer = () => {
   return (
     <div>
@@ -67,8 +67,8 @@ const Footer = () => {
                   <div class="image">
                     <img
                       className="logo-footer"
-                      src={require("../assets/images/logo.webp")}
-                      alt=""
+                      src={logo}
+                      alt="logo"
                     />
                   </div>
                 </a>
@@ -193,8 +193,8 @@ const Footer = () => {
                     {/* <img src="./images/logo_negative2.svg" alt="" /> */}
                     <img
                       className="logo-footer"
-                      src={require("../assets/images/logo.webp")}
-                      alt=""
+                      src={logo}
+                      alt="logo"
                     />
                   </div>
                   <p>

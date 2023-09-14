@@ -170,6 +170,7 @@ section {
 }
 
 .my-btn {
+  cursor: pointer;
   position: relative;
   border-radius: 4px;
   padding: 6px 10px;
@@ -271,6 +272,9 @@ header .icons .icon span {
   font-size: 11px;
   font-weight: bold;
   height: 15px;
+}
+header .icons img {
+  width: 30px;
 }
 header .icons #menu-bars,
 header .icons svg {

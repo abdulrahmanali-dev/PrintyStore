@@ -28,7 +28,7 @@ const products = [
     productName: "Violete Evergarden",
     imgUrl: primg1,
     category: "stickers",
-    price: 3000,
+    price: 4000,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -51,7 +51,7 @@ const products = [
     productName: "Naruto",
     imgUrl: primg2,
     category: "stickers",
-    price: 3000,
+    price: 2000,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
