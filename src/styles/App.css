@@ -358,14 +358,11 @@ header .icons svg:hover {
 }
 .features {
   background-color: #f9fbff;
-}
-.features::after {
-  content: "";
-  color: white;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  font-size: 20px;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 .features .feat {
   width: 217px;
@@ -510,6 +507,10 @@ header .icons svg:hover {
   padding-bottom: 25px;
 }
 
+.bg-clr {
+  background-color: #f9fbff;
+}
+
 .product-card {
   max-width: 250px !important;
   padding: 0;
@@ -517,6 +518,7 @@ header .icons svg:hover {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   transition: 0.3s all ease;
   background-color: #f9fbff;
+  color: #333;
   position: relative;
 }
 .product-card span svg {
@@ -550,15 +552,14 @@ header .icons svg:hover {
 
 .timer {
   background-color: #2872f8;
+  max-width: 1049px;
+  margin: auto;
+  border-radius: 65px;
+  padding: 50px;
 }
 .timer .image {
   width: 300px;
   margin: auto;
-}
-@media (min-width: 768px) {
-  .timer .image {
-    margin-left: auto;
-  }
 }
 .timer .time-wrapper {
   padding: 20px 0;
@@ -577,6 +578,14 @@ header .icons svg:hover {
   color: black;
 }
 
+@media (max-width: 768px) {
+  .timer {
+    border-radius: 0;
+  }
+  .timer .images {
+    margin-left: auto;
+  }
+}
 footer {
   /* Start Contact Section */
   background-color: #f9fbff;
@@ -598,7 +607,7 @@ footer .row h3 {
 }
 footer .row p {
   font-size: 14px;
-  color: #000;
+  color: #333;
   margin-bottom: -4px;
 }
 footer .row form {
@@ -622,7 +631,7 @@ footer .row form textarea {
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #000;
+  color: #333;
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid #ddd;
@@ -642,7 +651,7 @@ footer .row form textarea::placeholder {
 }
 footer .row form input:focus,
 footer .row form textarea:focus {
-  color: #000;
+  color: #333;
   background-color: #fff;
   border-color: #737373;
   outline: 0;
@@ -715,12 +724,12 @@ footer .footer-lg h3 {
   font-size: 17px;
   margin-bottom: 15px;
   font-weight: bold;
-  color: #000;
+  color: #333;
 }
 footer .footer-lg ul li {
   padding: 3px 0;
   letter-spacing: 0.4px;
-  color: #000;
+  color: #333;
 }
 footer .footer-lg ul li a {
   font-size: 16px;
@@ -751,14 +760,14 @@ footer.sm .footer button {
   box-shadow: none !important;
   font-weight: bold;
   font-size: 16px;
-  color: #000;
+  color: #333;
   font-weight: bold;
   font-size: 18px;
   padding-left: 0;
   padding-right: 0;
 }
 footer.sm .footer button::after {
-  color: #000;
+  color: #333;
   background-color: unset;
 }
 footer.sm .footer button:not(.collapsed) {

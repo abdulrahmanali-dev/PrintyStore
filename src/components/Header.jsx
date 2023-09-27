@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-// css
-import "../css/App.css";
+import { motion } from "framer-motion";
 // images
 import logo from "../assets/images/logo.webp";
 import userImg from "../assets/images/user-1.png";
-import { motion } from "framer-motion";
 
 const Header = () => {
  const [active, setActive] = useState("navbar-menu");
@@ -62,12 +60,12 @@ const Header = () => {
       <ul class="dropdown-menu">
        <li>
         <a class="dropdown-item" href="#">
-         Action
+         Account
         </a>
        </li>
        <li>
         <a class="dropdown-item" href="#">
-         Something
+         Setting
         </a>
        </li>
       </ul>

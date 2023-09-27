@@ -1,0 +1,37 @@
+@use "../variables" as *;
+
+.timer {
+ background-color: #2872f8;
+ max-width: 1049px;
+ margin: auto;
+ border-radius: 65px;
+ padding: 50px;
+ .image {
+  width: 300px;
+  margin: auto;
+ }
+ .time-wrapper {
+  padding: 20px 0;
+ }
+ .title {
+  font-size: 17px;
+ }
+ .btn {
+  background-color: white !important;
+  padding: 12px 20px;
+  font-weight: bold;
+  transition: 0.3s;
+  &:hover {
+   border: solid 1px $main-color;
+   color: black;
+  }
+ }
+}
+@media (max-width: 768px) {
+ .timer {
+  border-radius: 0;
+ }
+ .timer .images {
+  margin-left: auto;
+ }
+}

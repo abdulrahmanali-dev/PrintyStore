@@ -127,7 +127,7 @@ footer {
     }
     p {
       font-size: 14px;
-      color: #000;
+      color: $text_color;
       margin-bottom: -4px;
     }
     form {
@@ -147,7 +147,7 @@ footer {
         font-size: 0.875rem;
         font-weight: 400;
         line-height: 1.5;
-        color: #000;
+        color: $text_color;
         background-color: #fff;
         background-clip: padding-box;
         border: 1px solid #ddd;
@@ -159,7 +159,7 @@ footer {
           font-size: 12px;
         }
         &:focus {
-          color: #000;
+          color: $text_color;
           background-color: #fff;
           border-color: #737373;
           outline: 0;
@@ -242,7 +242,7 @@ footer {
       font-size: 17px;
       margin-bottom: 15px;
       font-weight: bold;
-      color: #000;
+      color: $text_color;
     }
     ul {
       li {
@@ -255,7 +255,7 @@ footer {
         }
         padding: 3px 0;
         letter-spacing: 0.4px;
-        color: #000;
+        color: $text_color;
         svg {
           font-size: 18px;
           padding-right: 4px;
@@ -281,13 +281,13 @@ footer.sm {
       box-shadow: none !important;
       font-weight: bold;
       font-size: 16px;
-      color: #000;
+      color: $text_color;
       font-weight: bold;
       font-size: 18px;
       padding-left: 0;
       padding-right: 0;
       &::after {
-        color: #000;
+        color: $text_color;
         background-color: unset;
       }
       &:not(.collapsed) {

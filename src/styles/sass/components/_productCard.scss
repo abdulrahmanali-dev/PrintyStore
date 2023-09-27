@@ -1,5 +1,7 @@
 @use "../variables" as *;
-
+.bg-clr {
+background-color: $bg_color;
+}
 .product-card {
   max-width: 250px !important;
   padding: 0;
@@ -7,6 +9,7 @@
   box-shadow: $shadow;
   transition: 0.3s all ease;
   background-color: $bg-color;
+  color: $text_color;
   position: relative;
   span svg {
     position: absolute;

@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row } from "reactstrap";
 import { Link } from "react-router-dom";
-import poster1  from "../../assets/images/products/posters/poster-1.webp";
+import messi_poster from "../../assets/images/products/posters/messi.webp";
+
 
 
 
@@ -12,7 +13,7 @@ const Timer = () => {
   const [seconds, setSeconds] = useState();
   let interval;
   const countDown = () => {
-    const distination = new Date("june 1, 2024").getTime();
+    const distination = new Date("jan 1, 2024").getTime();
 
     interval = setInterval(() => {
       const now = new Date().getTime();
@@ -73,7 +74,7 @@ const Timer = () => {
           <div className="col-12 col-md-6 d-none d-md-block">
             <div className="image">
               <img
-                src={poster1}
+                src={messi_poster}
               />
             </div>
           </div>

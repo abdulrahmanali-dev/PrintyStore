@@ -1,8 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./css/App.css";
-import { Button } from "bootstrap";
-import Home from "./pages/Home";
+import "./styles/App.css";
 import Layout from "./components/Layout/Layout";
 function App() {
   return (
