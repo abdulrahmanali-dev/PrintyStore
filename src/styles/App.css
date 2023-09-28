@@ -18,6 +18,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  outline: none;
 }
 
 body {
@@ -214,6 +215,22 @@ section {
   transform: translatey(0px);
 }
 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.margin-fixed-header {
+  margin-top: 70px;
+}
+
 a {
   transition: 0.3s;
 }
@@ -332,17 +349,10 @@ header .icons svg:hover {
   min-height: 100vh;
   background: center center no-repeat;
   background-size: cover;
-}
-.hero .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 .hero .info {
   z-index: 2;
@@ -379,6 +389,10 @@ header .icons svg:hover {
 }
 .features .feat .info {
   transition: 0.6s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
   background-color: #f9fbff;
@@ -830,4 +844,48 @@ footer.sm .copyrights {
   padding: 20px 0;
 }
 
-/* End Contact Section *//*# sourceMappingURL=App.css.map */
+/* End Contact Section */
+.common-section {
+  text-align: center;
+  padding: 150px 0;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.common-section h1 {
+  color: white;
+  font-weight: bold;
+  z-index: 2;
+  position: relative;
+}
+
+.product-page {
+  padding-top: 30px;
+}
+.product-page .row {
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-widget select {
+  padding: 5px 10px;
+  border: solid 1px #2872f8;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.search-box {
+  width: 100%;
+  border: solid 1px #2872f8;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+}
+.search-box input {
+  border: 0;
+  width: 100%;
+}/*# sourceMappingURL=App.css.map */

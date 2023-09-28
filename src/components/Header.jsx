@@ -4,8 +4,10 @@ import { motion } from "framer-motion";
 // images
 import logo from "../assets/images/logo.webp";
 import userImg from "../assets/images/user-1.png";
+import { useSelector } from "react-redux";
 
 const Header = () => {
+    const totalQuantity = useSelector(state  => state.cart.totalQuantity) 
  const [active, setActive] = useState("navbar-menu");
  const navbarToggle = () => {
   active === "navbar-menu"
@@ -46,7 +48,7 @@ const Header = () => {
       <Link to="/shop">
        <i className="fas  fa-shop"></i>
       </Link>
-      <span>2</span>
+      <span>{totalQuantity}</span>
      </div>
      <div class="dropdown">
       <button

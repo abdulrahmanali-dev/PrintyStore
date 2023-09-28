@@ -35,7 +35,7 @@ const Home = () => {
  return (
   <Helmet title="HOME">
    <section
-    className="hero d-flex justify-content-center align-items-center text-center"
+    className="hero "
     style={{ backgroundImage: `url('${allProducts}')` }}
    >
     <div className="overlay"></div>
@@ -62,7 +62,7 @@ const Home = () => {
    <section className="features">
     {features.map((item, index) => (
      <div className=" feat" key={index}>
-      <div className="info d-flex flex-column justify-content-center align-items-center ">
+      <div className="info">
        <div className="icon">
         <FontAwesomeIcon icon={item.icon} />
        </div>

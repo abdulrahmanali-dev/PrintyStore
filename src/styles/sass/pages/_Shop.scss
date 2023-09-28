@@ -1,0 +1,46 @@
+// Variables
+@use "../variables" as *;
+
+.common-section {
+ text-align: center;
+ padding: 150px 0;
+ background-size: cover;
+ background-position: center;
+ position: relative;
+ h1 {
+  color: white;
+  font-weight: bold;
+  z-index: 2;
+  position: relative;
+ }
+}
+.product-page  {
+    padding-top: 30px;
+    .row {
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+}
+.filter-widget {
+ select {
+  padding: 5px 10px;
+  border: solid 1px $main_color;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+ }
+}
+.search-box {
+ width: 100%;
+ border: solid 1px $main_color;
+ border-radius: 5px;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 5px 10px;
+ input  {
+    border: 0;
+    width: 100%;
+ }
+}

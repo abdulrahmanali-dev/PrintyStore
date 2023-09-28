@@ -27,14 +27,21 @@ const cartSlice = createSlice({
     });
    } else {
     existingItem.quantity++;
-    existingItem.totalPrice = Number(existingItem.totalPrice) + Number(newItem.price);
+    existingItem.totalPrice =
+     Number(existingItem.totalPrice) + Number(newItem.price);
    }
-   state.totalAmount = state.cartItems.reduce((total, item)=> {
-    total + Number(item.price) * Number (item.quantity)
-   })
+
+
+
+   state.totalAmount = state.cartItems.reduce(
+    (total, item) =>  total + Number(item.price) * Number(item.quantity));
+
+   console.log(state.totalQuantity);
+   console.log(state.cartItems);
+   console.log(newItem);
   },
  },
 });
 
-export default cartSlice.reducer;
 export const cartActions = cartSlice.actions;
+export default cartSlice.reducer;

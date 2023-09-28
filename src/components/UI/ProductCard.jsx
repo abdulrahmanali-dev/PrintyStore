@@ -2,18 +2,20 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { cartActions } from "../../redux/slices/cartSlice";
+import { ToastContainer, toast } from 'react-toastify';
 
-const ProductCard = ({item}) => {
+const ProductCard = ({ item }) => {
  const dispatch = useDispatch();
  const addToCart = () => {
   dispatch(
    cartActions.addItem({
-    id: "asdasd",
-    image: "asdasd",
-    productName: "asdasd",
-    price: "asdasd",
+    id: item.id,
+    productName: item.productName,
+    price: item.price,
+    Image: item.imgUrl,
    })
   );
+  toast.success('Product added Successfully')
  };
  return (
   <div class="card col-12 col-md-4 product-card">
