@@ -7,7 +7,7 @@ import userImg from "../assets/images/user-1.png";
 import { useSelector } from "react-redux";
 
 const Header = () => {
-    const totalQuantity = useSelector(state  => state.cart.totalQuantity) 
+ const totalQuantity = useSelector((state) => state.cart.totalQuantity);
  const [active, setActive] = useState("navbar-menu");
  const navbarToggle = () => {
   active === "navbar-menu"

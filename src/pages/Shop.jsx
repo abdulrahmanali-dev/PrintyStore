@@ -7,6 +7,7 @@ import products from "../assets/data/products";
 
 const Shop = () => {
  const [productsData, setProductsData] = useState(products);
+ //  filtering
  const handleFitler = (e) => {
   const filterValue = e.target.value;
   if (filterValue === "stickers") {
@@ -32,6 +33,16 @@ const Shop = () => {
   }
  };
 
+ //  search
+ const handleSearch = (e) => {
+  const searchTerm = e.target.value;
+
+  const searchedProducts = products.filter((item) =>
+   item.productName.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+  setProductsData(searchedProducts);
+ };
+
  return (
   <Helmet title="Shop">
    <CommonSection title={"Products"} />
@@ -41,7 +52,7 @@ const Shop = () => {
       <Col lg="3" sm="12" className="filter-widget">
        <select onChange={handleFitler}>
         <option>Fitler By Category</option>
-        <option  value="stickers">Stickers</option>
+        <option value="stickers">Stickers</option>
         <option value="figures">Figures</option>
         <option value="posters">Posters</option>
        </select>
@@ -57,7 +68,7 @@ const Shop = () => {
       </Col>
       <Col lg="3" md="3">
        <div className="search-box">
-        <input type="text" placeholder="Search..." />
+        <input type="text" placeholder="Search..." onChange={handleSearch} />
         <span>
          <i className="fas fa-search"></i>
         </span>
@@ -69,7 +80,7 @@ const Shop = () => {
    <section>
     <Container>
      {productsData.length === 0 ? (
-      <h1>No Products Are Found !</h1>
+      <h1 className="text-center">No Products Are Found !</h1>
      ) : (
       <ProductList data={productsData} />
      )}

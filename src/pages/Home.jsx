@@ -101,8 +101,8 @@ const Home = () => {
    <section class="featured-products">
     <Container>
      <h2 class="heading">Featured Products</h2>
-     <ProductList data={postersProducts} />
-     {/* <ProductList data={stickersProducts} /> */}
+     {/* <ProductList data={postersProducts} /> */}
+     <ProductList data={stickersProducts} />
     </Container>
    </section>
    <Timer />

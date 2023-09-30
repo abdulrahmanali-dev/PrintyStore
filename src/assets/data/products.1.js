@@ -1,16 +1,10 @@
 import collection_spyxfamilly from "../images/products/collection-spyxfamilly.webp";
 import collection_tokyoghoul from "../images/products/collection-tokyoghoul.webp";
-// Posters
-import posters1 from "../images/products/posters/posters-1.webp";
-import posters2 from "../images/products/posters/posters-2.webp";
 import aot_poster from "../images/products/posters/aot.webp";
 import messi_poster from "../images/products/posters/messi.webp";
 import thewalkingdead__poster from "../images/products/posters/thewalkingdead.webp";
-// figures
-import figures1 from "../images/products/figures/figures1.webp";
 import theweatcher_figures from "../images/products/figures/theweatcher.webp";
 import godofwar_figures from "../images/products/figures/godofwar.webp";
-// Stickers
 import veg_stickers from "../images/products/stickers/veg.webp";
 import aot_stickers from "../images/products/stickers/aot.webp";
 import deathnote_stickers from "../images/products/stickers/deathnote.webp";
@@ -23,11 +17,8 @@ import jujutsu_stickers from "../images/products/stickers/jujutsu.webp";
 import motivation_stickers from "../images/products/stickers/motivation.webp";
 import motivation_back_stickers from "../images/products/stickers/motivation-back.webp";
 import naruto_stickers from "../images/products/stickers/naruto.webp";
-import stickers1 from "../images/products/stickers/stickers-1.webp";
-import stickers2 from "../images/products/stickers/stickers-2.webp";
-import stickers3 from "../images/products/stickers/stickers-3.webp";
 
-const products = [
+export const products = [
  {
   id: "01",
   productName: "Jujutsu Kaisen",
@@ -60,12 +51,10 @@ const products = [
    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
   reviews: [
    {
-    rating: 2.8,
-    text: "this item is very good .",
-    name:'jackie chan'
+    rating: 4.8,
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
    },
    {
-        name:'jackie chan',
     rating: 4.8,
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
    },
@@ -85,12 +74,10 @@ const products = [
    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
   reviews: [
    {
-    rating: 2.8,
-    text: "this item is very good .",
-    name:'jackie chan'
+    rating: 4.8,
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
    },
    {
-        name:'jackie chan',
     rating: 4.8,
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
    },
@@ -109,19 +96,16 @@ const products = [
    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
   reviews: [
    {
-    rating: 2.8,
-    text: "this item is very good .",
-    name:'jackie chan'
+    rating: 4.8,
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
    },
    {
-        name:'jackie chan',
     rating: 4.8,
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
    },
   ],
   avgRating: 4.7,
  },
-
 
  {
   id: "05",
@@ -136,12 +120,10 @@ const products = [
    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
   reviews: [
    {
-    rating: 2.8,
-    text: "this item is very good .",
-    name:'jackie chan'
+    rating: 4.8,
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
    },
    {
-        name:'jackie chan',
     rating: 4.8,
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
    },
@@ -160,12 +142,10 @@ const products = [
    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
   reviews: [
    {
-    rating: 2.8,
-    text: "this item is very good .",
-    name:'jackie chan'
+    rating: 4.8,
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
    },
    {
-        name:'jackie chan',
     rating: 4.8,
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
    },
@@ -185,12 +165,10 @@ const products = [
    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
   reviews: [
    {
-    rating: 2.8,
-    text: "this item is very good .",
-    name:'jackie chan'
+    rating: 4.8,
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
    },
    {
-        name:'jackie chan',
     rating: 4.8,
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
    },
@@ -209,19 +187,17 @@ const products = [
    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
   reviews: [
    {
-    rating: 2.8,
-    text: "this item is very good .",
-    name:'jackie chan'
+    rating: 4.8,
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
    },
    {
-        name:'jackie chan',
     rating: 4.8,
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
    },
   ],
   avgRating: 4.7,
  },
-//  posters
+ //  posters
  {
   id: "09",
   productName: "messi",
@@ -234,12 +210,10 @@ const products = [
    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
   reviews: [
    {
-    rating: 2.8,
-    text: "this item is very good .",
-    name:'jackie chan'
+    rating: 4.8,
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
    },
    {
-        name:'jackie chan',
     rating: 4.8,
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
    },
@@ -258,12 +232,10 @@ const products = [
    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
   reviews: [
    {
-    rating: 2.8,
-    text: "this item is very good .",
-    name:'jackie chan'
+    rating: 4.8,
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
    },
    {
-        name:'jackie chan',
     rating: 4.8,
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
    },
@@ -282,19 +254,17 @@ const products = [
    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
   reviews: [
    {
-    rating: 2.8,
-    text: "this item is very good .",
-    name:'jackie chan'
+    rating: 4.8,
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
    },
    {
-        name:'jackie chan',
     rating: 4.8,
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
    },
   ],
   avgRating: 4.7,
  },
-//  
+ //
  {
   id: "12",
   productName: "Attack On Titan",
@@ -307,19 +277,17 @@ const products = [
    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
   reviews: [
    {
-    rating: 2.8,
-    text: "this item is very good .",
-    name:'jackie chan'
+    rating: 4.8,
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
    },
    {
-        name:'jackie chan',
     rating: 4.8,
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
    },
   ],
   avgRating: 4.7,
  },
- 
+
  {
   id: "13",
   productName: "The Weatcher",
@@ -332,12 +300,10 @@ const products = [
    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
   reviews: [
    {
-    rating: 2.8,
-    text: "this item is very good .",
-    name:'jackie chan'
+    rating: 4.8,
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
    },
    {
-        name:'jackie chan',
     rating: 4.8,
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
    },
@@ -356,12 +322,10 @@ const products = [
    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
   reviews: [
    {
-    rating: 2.8,
-    text: "this item is very good .",
-    name:'jackie chan'
+    rating: 4.8,
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
    },
    {
-        name:'jackie chan',
     rating: 4.8,
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
    },
@@ -380,12 +344,10 @@ const products = [
    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
   reviews: [
    {
-    rating: 2.8,
-    text: "this item is very good .",
-    name:'jackie chan'
+    rating: 4.8,
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
    },
    {
-        name:'jackie chan',
     rating: 4.8,
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
    },
@@ -404,19 +366,14 @@ const products = [
    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
   reviews: [
    {
-    rating: 2.8,
-    text: "this item is very good .",
-    name:'jackie chan'
+    rating: 4.8,
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
    },
    {
-        name:'jackie chan',
     rating: 4.8,
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
    },
   ],
   avgRating: 4.7,
  },
-
 ];
-
-export default products;
