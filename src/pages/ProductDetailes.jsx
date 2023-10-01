@@ -44,6 +44,13 @@ const ProductDetailes = () => {
   e.preventDefault();
   const submitUserName = reviewUser.current.value;
   const submitUserMsg = reviewMsg.current.value;
+ const reviewObj = {
+      userName: submitUserName,
+      userMsg: submitUserMsg,
+      rating : usrRating,
+    }
+    console.log(reviewObj);
+    toast.success('Review Submitted')
  };
 
 //  add to product cart 
@@ -59,6 +66,11 @@ const addToCart = () => {
  );
  toast.success("Product added Successfully");
 };
+// Scroll TO Top
+
+useEffect(()=> {
+    window.scrollTo(0,0)
+} ,[product])
  return (
   <Helmet title={productName}>
    <CommonSection title={productName} />
@@ -142,6 +154,7 @@ const addToCart = () => {
              <div className="form-group">
               <input 
               ref={reviewUser}
+              required
               type="text" name="" placeholder="Enter Name" id="" />
              </div>
              <div className="form-group">
@@ -169,6 +182,7 @@ const addToCart = () => {
                placeholder="Enter Name"
                id=""
                rows="4"
+               required
               ></textarea>
              </div>
              <button className="my-btn">Submit</button>

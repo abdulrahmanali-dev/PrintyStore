@@ -20,7 +20,7 @@ const Header = () => {
  };
  const navLinks = [
   { path: "home", display: "Home" },
-  { path: "products", display: "Products" },
+  { path: "shop", display: "Products" },
   { path: "contact", display: "Contact" },
  ];
  return (
@@ -45,7 +45,7 @@ const Header = () => {
       <span>2</span>
      </div>
      <div className="icon">
-      <Link to="/shop">
+      <Link to="/cart">
        <i className="fas  fa-shop"></i>
       </Link>
       <span>{totalQuantity}</span>

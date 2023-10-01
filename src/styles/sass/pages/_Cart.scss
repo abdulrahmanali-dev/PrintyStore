@@ -1,0 +1,11 @@
+.table {
+ tr td {
+  img {
+   width: 60px;
+   object-fit: contain;
+  }
+  span {
+    cursor: pointer;
+  }
+ }
+}
