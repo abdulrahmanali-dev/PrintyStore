@@ -3,7 +3,10 @@ import Helmet from "../components/Helmet";
 import CommonSection from "../components/UI/CommonSection";
 import { Col, Container, Row } from "reactstrap";
 import jujutsuImg from "../assets/images/products/stickers/jujutsu.webp";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { motion } from "framer-motion";
+import { cartActions } from "../redux/slices/cartSlice";
+import { toast } from "react-toastify";
 const Cart = () => {
  const cartItems = useSelector((state) => state.cart.cartItems);
 
@@ -29,19 +32,7 @@ const Cart = () => {
          </thead>
          <tbody>
           {cartItems.map((item, index) => (
-           <tr>
-            <td>
-             <img src={item.imgUrl} alt="" />
-            </td>
-            <td>{item.productName}</td>
-            <td>{item.price}</td>
-            <td>{item.quantity}</td>
-            <td>
-             <span>
-              <i class="fa-solid fa-trash-can"></i>
-             </span>
-            </td>
-           </tr>
+           <Tr item={item} key={index} />
           ))}
          </tbody>
         </table>
@@ -51,6 +42,29 @@ const Cart = () => {
     </Container>
    </section>
   </Helmet>
+ );
+};
+
+const Tr = ({ item }) => {
+    const dispatch  = useDispatch()
+    const delItem = ()=> {
+        dispatch (cartActions.delItem(item.id))
+        toast.success('Item Deleted Successfully')
+    }
+ return (
+  <tr>
+   <td>
+    <img src={item.imgUrl} alt="" />
+   </td>
+   <td>{item.productName}</td>
+   <td>{item.price}</td>
+   <td>{item.quantity}</td>
+   <td>
+    <span onClick={delItem}>
+     <i class="fa-solid fa-trash-can"></i>
+    </span>
+   </td>
+  </tr>
  );
 };
 
