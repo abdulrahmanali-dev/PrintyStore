@@ -5,6 +5,12 @@ import { motion } from "framer-motion";
 import logo from "../assets/images/logo.webp";
 import userImg from "../assets/images/user-1.png";
 import { useSelector } from "react-redux";
+import {
+ DropdownItem,
+ DropdownMenu,
+ DropdownToggle,
+ UncontrolledDropdown,
+} from "reactstrap";
 
 const Header = () => {
  const totalQuantity = useSelector((state) => state.cart.totalQuantity);
@@ -42,7 +48,7 @@ const Header = () => {
       <Link to="/fav">
        <i className="fas fa-heart"></i>
       </Link>
-      <span>2</span>
+      <span>0</span>
      </div>
      <div className="icon">
       <Link to="/cart">
@@ -50,28 +56,20 @@ const Header = () => {
       </Link>
       <span>{totalQuantity}</span>
      </div>
-     <div class="dropdown">
-      <button
-       className="icon border-0"
-       type="button"
-       data-bs-toggle="dropdown"
-       aria-expanded="false"
-      >
+     <UncontrolledDropdown>
+      <DropdownToggle color="white !important" className="border-0 p-0 me-2">
        <motion.img whileTap={{ scale: 1.1 }} src={userImg} alt="user" />
-      </button>
-      <ul class="dropdown-menu">
-       <li>
-        <a class="dropdown-item" href="#">
-         Account
-        </a>
-       </li>
-       <li>
-        <a class="dropdown-item" href="#">
-         Setting
-        </a>
-       </li>
-      </ul>
-     </div>
+      </DropdownToggle>
+      <DropdownMenu end>
+       <DropdownItem header>Your Acount</DropdownItem>
+       <DropdownItem>
+        <Link className="d-block" to={"/signup"}>Register</Link>
+       </DropdownItem>
+       <DropdownItem>
+        <Link className="d-block" to={"/login"}>Login</Link>{" "}
+       </DropdownItem>
+      </DropdownMenu>
+     </UncontrolledDropdown>
      <div
       onClick={() => {
        navbarToggle();

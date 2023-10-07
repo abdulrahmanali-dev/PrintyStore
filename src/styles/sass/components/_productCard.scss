@@ -11,6 +11,8 @@ background-color: $bg_color;
   background-color: $bg-color;
   color: $text_color;
   position: relative;
+  width: 100%;
+  margin: auto;
   span svg {
     position: absolute;
     transition: 0.3s;

@@ -1,18 +1,16 @@
 import React, { useEffect, useState } from "react";
 import FreeShipping from "../components/FreeShipping";
-import NewArrivals from "../components/NewArrivals";
 import Helmet from "../components/Helmet";
 import Timer from "../components/UI/Timer";
+import featuresData from "../assets/data/serviceData";
 
-import features from "../assets/data/serviceData";
-
-import allProducts from "../assets/images/products/stickers/stickers-1.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import allProducts from "../assets/images/products/stickers/stickers-1.webp";
 import stickercollection from "../assets/images/products/stickers/stickers-2.webp";
 import { Col, Container, Row } from "reactstrap";
-import { Link, NavLink } from "react-router-dom";
+import {   NavLink } from "react-router-dom";
 import products from "../assets/data/products";
-import ProductList from "../components/UI/ProductList";
+import ProductOwl from "../components/UI/ProductOwl";
 const Home = () => {
  const [postersProducts, setPostersProducts] = useState(products);
  const [stickersProducts, setStickersProducts] = useState(products);
@@ -25,12 +23,8 @@ const Home = () => {
   const filteredStickersProducts = products.filter(
    (item) => item.category === "stickers"
   );
-  const filteredNewArrivals = products.filter(
-   (item) => item.category === "stickers"
-  );
   setPostersProducts(filteredPostersProducts);
   setStickersProducts(filteredStickersProducts);
-  setNewArrivals(filteredNewArrivals);
  }, []);
  return (
   <Helmet title="HOME">
@@ -60,7 +54,7 @@ const Home = () => {
     </div>
    </section>
    <section className="features">
-    {features.map((item, index) => (
+    {featuresData.map((item, index) => (
      <div className=" feat" key={index}>
       <div className="info">
        <div className="icon">
@@ -101,15 +95,14 @@ const Home = () => {
    <section class="featured-products">
     <Container>
      <h2 class="heading">Featured Products</h2>
-     {/* <ProductList data={postersProducts} /> */}
-     <ProductList data={stickersProducts} />
+     <ProductOwl data={stickersProducts} />
     </Container>
    </section>
    <Timer />
    <section class="featured-products">
     <Container>
      <h2 class="heading">Stickers</h2>
-     <ProductList data={postersProducts} />
+     <ProductOwl data={postersProducts} />
     </Container>
    </section>
    <FreeShipping />

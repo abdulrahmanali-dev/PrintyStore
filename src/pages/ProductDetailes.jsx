@@ -10,7 +10,7 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { cartActions } from "../redux/slices/cartSlice";
 import { toast } from "react-toastify";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const ProductDetailes = () => {
  const { id } = useParams();
  const product = products.find((item) => item.id === id);

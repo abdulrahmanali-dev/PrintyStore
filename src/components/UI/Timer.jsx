@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row } from "reactstrap";
 import { Link } from "react-router-dom";
-import messi_poster from "../../assets/images/products/posters/messi.webp";
+import stickersImg from "../../assets/images/products/stickers/stickers-2.webp";
 
 
 
@@ -74,7 +74,7 @@ const Timer = () => {
           <div className="col-12 col-md-6 d-none d-md-block">
             <div className="image">
               <img
-                src={messi_poster}
+                src={stickersImg}
               />
             </div>
           </div>

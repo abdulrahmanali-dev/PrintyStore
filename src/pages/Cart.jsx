@@ -7,8 +7,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { motion } from "framer-motion";
 import { cartActions } from "../redux/slices/cartSlice";
 import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
 const Cart = () => {
  const cartItems = useSelector((state) => state.cart.cartItems);
+ const totalAmount = useSelector((state) => state.cart.totalAmount);
 
  return (
   <Helmet title="Cart">
@@ -16,7 +18,7 @@ const Cart = () => {
    <section>
     <Container>
      <Row>
-      <Col lg="9">
+      <Col lg="8">
        {cartItems.length === 0 ? (
         <h2>No Items Added</h2>
        ) : (
@@ -38,6 +40,21 @@ const Cart = () => {
         </table>
        )}
       </Col>
+      <Col lg="3">
+       <div className="sub-total">
+        <h5>
+         Subtotal
+         <span>{totalAmount}s.p</span>
+        </h5>
+        <p>After Shipping And Costs</p>
+        <Link className="my-btn" to={"/shop"}>
+         Continue Shopping
+        </Link>
+        <Link className="my-btn" to={"/checkout"}>
+         Checkout
+        </Link>
+       </div>
+      </Col>
      </Row>
     </Container>
    </section>
@@ -46,11 +63,11 @@ const Cart = () => {
 };
 
 const Tr = ({ item }) => {
-    const dispatch  = useDispatch()
-    const delItem = ()=> {
-        dispatch (cartActions.delItem(item.id))
-        toast.success('Item Deleted Successfully')
-    }
+ const dispatch = useDispatch();
+ const delItem = () => {
+  dispatch(cartActions.delItem(item.id));
+  toast.success("Item Deleted Successfully");
+ };
  return (
   <tr>
    <td>

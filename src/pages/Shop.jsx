@@ -31,6 +31,31 @@ const Shop = () => {
   if (filterValue === "Fitler By Category") {
    setProductsData(products);
   }
+  //
+  if (filterValue === "ascending") {
+   const filteredProducts = [...productsData].sort((a, b) =>
+    a.productName.localeCompare(b.productName)
+   );
+   setProductsData(filteredProducts);
+  }
+
+  if (filterValue === "descending") {
+   const filteredProducts = [...productsData].sort((a, b) =>
+    b.productName.localeCompare(a.productName)
+   );
+   setProductsData(filteredProducts);
+  }
+
+  //
+  if (filterValue === "price-ascending") {
+   const filteredProducts = [...productsData].sort((a, b) => a.price - b.price);
+   setProductsData(filteredProducts);
+  }
+
+  if (filterValue === "price-descending") {
+   const filteredProducts = [...productsData].sort((a, b) => b.price - a.price);
+   setProductsData(filteredProducts);
+  }
  };
 
  //  search
@@ -42,9 +67,9 @@ const Shop = () => {
   );
   setProductsData(searchedProducts);
  };
- useEffect(()=> {
-    window.scrollTo(0,0)
-} ,[ ])
+ useEffect(() => {
+  window.scrollTo(0, 0);
+ }, []);
  return (
   <Helmet title="Shop">
    <CommonSection title={"Products"} />
@@ -61,10 +86,12 @@ const Shop = () => {
       </Col>
       <Col lg="3">
        <div className="filter-widget">
-        <select>
+        <select onChange={handleFitler}>
          <option>Fitler By</option>
-         <option value="ascending">Ascending</option>
-         <option value="descending">descending</option>
+         <option value="ascending">Name Ascending</option>
+         <option value="descending">Name Descending</option>
+         <option value="price-ascending">Price Ascending</option>
+         <option value="price-descending">Price Descending</option>
         </select>
        </div>
       </Col>
