@@ -1,9 +1,18 @@
 /* google fonts */
 @use "./sass/variables" as *;
 @use "./sass/globalValues";
+/* --------------HEADER-------------- */
+@use "../styles/sass/components/header";
+/* -------------HOME PAGE------------ */
 @use "../styles/sass/pages/Home";
+/* -------------SHOP PAGE------------ */
 @use "../styles/sass/pages/Shop";
+/* -------------CART PAGE------------ */
 @use "../styles/sass/pages/cart";
+/* -------------CHECKOUT PAGE------------ */
 @use "../styles/sass/pages/Checkout";
+/* -------------LOGIN PAGE------------ */
 @use "../styles/sass/pages/login";
+/* --------------FOOTER------------ */
+@use "../styles/sass/components/footer";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap");

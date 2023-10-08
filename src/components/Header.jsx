@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import logo from "../assets/images/logo.webp";
 import userImg from "../assets/images/user-1.png";
 import { useSelector } from "react-redux";
+
 import {
  DropdownItem,
  DropdownMenu,
@@ -14,6 +15,7 @@ import {
 
 const Header = () => {
  const totalQuantity = useSelector((state) => state.cart.totalQuantity);
+ const favoriteItems = useSelector((state) => state.cart.favoriteItems);
  const [active, setActive] = useState("navbar-menu");
  const navbarToggle = () => {
   active === "navbar-menu"
@@ -27,7 +29,7 @@ const Header = () => {
  const navLinks = [
   { path: "home", display: "Home" },
   { path: "shop", display: "Products" },
-  { path: "contact", display: "Contact" },
+  { path: "checkout", display: "Checkout" },
  ];
  return (
   <header>
@@ -48,7 +50,7 @@ const Header = () => {
       <Link to="/fav">
        <i className="fas fa-heart"></i>
       </Link>
-      <span>0</span>
+      <span>{favoriteItems.length}</span>
      </div>
      <div className="icon">
       <Link to="/cart">
@@ -63,10 +65,14 @@ const Header = () => {
       <DropdownMenu end>
        <DropdownItem header>Your Acount</DropdownItem>
        <DropdownItem>
-        <Link className="d-block" to={"/signup"}>Register</Link>
+        <Link className="d-block" to={"/signup"}>
+         Register
+        </Link>
        </DropdownItem>
        <DropdownItem>
-        <Link className="d-block" to={"/login"}>Login</Link>{" "}
+        <Link className="d-block" to={"/login"}>
+         Login
+        </Link>{" "}
        </DropdownItem>
       </DropdownMenu>
      </UncontrolledDropdown>

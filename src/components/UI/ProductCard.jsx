@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { cartActions } from "../../redux/slices/cartSlice";
 import { ToastContainer, toast } from "react-toastify";
+import { useSelector } from 'react-redux';
 
 const ProductCard = ({ item }) => {
  const dispatch = useDispatch();
@@ -17,9 +18,33 @@ const ProductCard = ({ item }) => {
   );
   toast.success("Product added Successfully");
  };
+ const favoriteItems = useSelector((state) => state.cart.favoriteItems);
+ const isFavorite = favoriteItems.some(favoriteItem => favoriteItem.id === item.id);
+
+//  
+const addToFavorite = () => {
+    const newItem = {
+      id: item.id,
+      productName: item.productName,
+      price: item.price,
+      imgUrl: item.imgUrl,
+    };
+    const existingItem = favoriteItems.find((item) => item.id === newItem.id);
+  
+    if (existingItem) {
+      // Item exists in favorites, remove it
+      dispatch(cartActions.addToFavorite(newItem));
+      toast.success("Product removed from favorites");
+    } else {
+      // Item does not exist in favorites, add it
+      dispatch(cartActions.addToFavorite(newItem));
+      toast.success("Product added to favorites");
+    }
+  };
+  
  return (
   <div class="card col-12 col-md-4 product-card">
-   <span>
+   <span onClick={addToFavorite} className={`favorite-heart ${isFavorite ? 'favorite' : ''}`}>
     <i class="fas fa-heart"></i>
    </span>
    <img class="card-img-top" src={item.imgUrl} alt="Card image cap" />
