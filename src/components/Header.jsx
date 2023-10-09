@@ -12,6 +12,7 @@ import {
  DropdownToggle,
  UncontrolledDropdown,
 } from "reactstrap";
+import DarkMode from "./DarkMode";
 
 const Header = () => {
  const totalQuantity = useSelector((state) => state.cart.totalQuantity);
@@ -46,6 +47,7 @@ const Header = () => {
      <NavLink to="contact">Contact</NavLink> */}
     </nav>
     <div class="icons">
+        <DarkMode />
      <div className="icon">
       <Link to="/fav">
        <i className="fas fa-heart"></i>

@@ -1,18 +1,79 @@
 /* google fonts */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap");
-/*  css variables */
 :root {
-  --card-bg-01: #fdefe6;
-  --card-bg-02: #d6e5fb;
-  --card-bg-03: #ceebe9;
-  --card-bg-04: #e2f2b2;
-  --primary-color: #0a1d37;
-  --hero-bg: #d6e5fb;
-  --heading-fontSize: 2rem;
-  --small-text-color: #999;
-  --heading-text-color: #0a1d37;
+  --main-color: #2872f8;
+  --secondary-color: #6616cb;
+  --bg-color: #f9fbff;
+  --card-bg: #c8d5e8;
+  --text-color: #333;
+  --heading-color: #344161;
+  --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  --gradient: linear-gradient(to right, #2872f8, #6616cb);
 }
 
+[data-theme=dark] {
+  --bg-color: #0f172a;
+  --text-color: white;
+  --heading-color: #b9e0f2;
+}
+
+/* google fonts */
+.bg-clr {
+  background-color: var(--bg-color);
+}
+
+.product-card {
+  max-width: 250px !important;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: var(--shadow);
+  transition: 0.3s all ease;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  position: relative;
+  width: 100%;
+  margin: auto;
+}
+.product-card .favorite svg {
+  color: var(--secondary-color);
+}
+.product-card .favorite-heart {
+  position: absolute;
+  transition: 0.3s;
+  font-size: 20px;
+  color: #2872f8;
+  cursor: pointer;
+  right: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+}
+.product-card .favorite-heart:hover {
+  transform: scale(1.1);
+}
+.product-card img {
+  border-radius: 0;
+}
+.product-card .card-title {
+  font-size: 17px;
+}
+.product-card:hover {
+  transform: translatey(-10px);
+}
+.product-card h5 {
+  font-weight: bold;
+}
+.product-card p {
+  text-align: center;
+}
+
+/* google fonts */
 /* reset browser default */
 * {
   margin: 0;
@@ -23,6 +84,7 @@
 
 body {
   font-family: "Montserrat", sans-serif;
+  background-color: var(--bg-color);
 }
 
 h1,
@@ -61,11 +123,11 @@ section {
   text-align: center;
   font-weight: bold;
   padding-bottom: 40px;
-  color: #333;
+  color: var(--text-color);
 }
 
 .btn-awesome {
-  background: linear-gradient(to right, #2872f8, #6616cb);
+  background: linear-gradient(to right, var(--main-color), var(--secondary-color));
   color: white;
   font-weight: bold;
   padding: 12px 20px;
@@ -175,7 +237,7 @@ section {
   position: relative;
   border-radius: 4px;
   padding: 6px 10px;
-  border: 2px solid #2872f8;
+  border: 2px solid var(--main-color);
   font-size: 14px;
   width: -moz-fit-content;
   width: fit-content;
@@ -193,7 +255,7 @@ section {
   bottom: 0px;
   right: 0;
   z-index: -1;
-  background: linear-gradient(to right, #2872f8, #6616cb);
+  background: var(--gradient);
   transition: transform 0.3s ease-in-out;
   transform: scaleX(0);
   transform-origin: left;
@@ -232,6 +294,7 @@ section {
 }
 
 /* --------------HEADER-------------- */
+/* google fonts */
 a {
   transition: 0.3s;
 }
@@ -239,7 +302,7 @@ a {
 header {
   position: fixed;
   top: 0;
-  background-color: #f9fbff;
+  background-color: var(--bg-color);
   right: 0;
   left: 0;
   z-index: 1000;
@@ -261,14 +324,14 @@ header .logo {
   height: 70px;
 }
 header .navbar-menu a {
-  color: #333;
+  color: var(--text-color);
   font-weight: bold;
   font-size: 15px;
   padding: 0 15px;
 }
 header .navbar-menu a:hover, header .navbar-menu a.active {
-  color: #2872f8;
-  color: #2872f8;
+  color: var(--main-color);
+  color: var(--main-color);
 }
 header .icons {
   display: flex;
@@ -281,7 +344,7 @@ header .icons .icon span {
   position: absolute;
   top: -6px;
   right: 10px;
-  background-color: #2872f8;
+  background-color: var(--main-color);
   color: white;
   border-radius: 50%;
   width: 15px;
@@ -296,9 +359,9 @@ header .icons img {
 }
 header .icons #menu-bars,
 header .icons svg {
-  color: #2872f8;
-  margin-right: 10px;
+  color: var(--main-color);
   border-radius: 5px;
+  margin-right: 10px;
   display: flex;
   padding: 5px 10px;
   text-transform: lowercase;
@@ -307,13 +370,19 @@ header .icons svg {
   text-align: center;
   transition: 0.2s;
 }
+@media (max-width: 992px) {
+  header .icons #menu-bars,
+  header .icons svg {
+    margin-right: 5px;
+  }
+}
 header .icons #menu-bars {
   display: none;
 }
 header .icons #menu-bars:hover,
 header .icons svg:hover {
   color: #fff;
-  background-color: #6616cb;
+  background-color: var(--secondary-color);
 }
 
 @media (max-width: 768px) {
@@ -325,7 +394,7 @@ header .icons svg:hover {
     top: 100%;
     left: 0;
     right: 0;
-    background-color: #f9fbff;
+    background-color: var(--bg-color);
     border-top: solid 2px #999;
     border-bottom: solid 2px #999;
     transition: 0.2s linear;
@@ -347,6 +416,7 @@ header .icons svg:hover {
   }
 }
 /* -------------HOME PAGE------------ */
+/* google fonts */
 .hero {
   min-height: 100vh;
   background: center center no-repeat;
@@ -362,7 +432,7 @@ header .icons svg:hover {
 .hero .info h2 {
   font-weight: bold;
   font-size: 70px;
-  color: #2872f8;
+  color: var(--main-color);
 }
 .hero .info P {
   color: white;
@@ -376,7 +446,7 @@ header .icons svg:hover {
 
 /* Features */
 .features {
-  background-color: #f9fbff;
+  background-color: var(--bg-color);
   display: flex;
   gap: 40px;
   flex-wrap: wrap;
@@ -404,7 +474,7 @@ header .icons svg:hover {
   align-items: center;
   width: 100%;
   height: 100%;
-  background-color: #f9fbff;
+  background-color: var(--bg-color);
   border-radius: 7px;
   padding: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
@@ -412,7 +482,7 @@ header .icons svg:hover {
 .features .feat .info .icon {
   width: 80px;
   height: 80px;
-  background-color: #f9fbff;
+  background-color: var(--bg-color);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   border-radius: 50%;
   margin: 15px 0 12px 0;
@@ -424,18 +494,18 @@ header .icons svg:hover {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  color: #2872f8;
+  color: var(--main-color);
 }
 .features .feat .info p {
   font-size: 22px;
-  color: #333;
+  color: var(--text-color);
   font-weight: bold;
   letter-spacing: -1px;
   margin-bottom: 10px;
 }
 
 .free-shipping {
-  background-color: #f9fbff;
+  background-color: var(--bg-color);
 }
 .free-shipping .row {
   padding: 10px;
@@ -454,7 +524,7 @@ header .icons svg:hover {
 .free-shipping .title h2 {
   font-weight: bold;
   font-size: 35px;
-  color: #344161;
+  color: var(--heading-color);
 }
 @media (min-width: 576px) {
   .free-shipping .title h2 {
@@ -485,16 +555,16 @@ header .icons svg:hover {
   }
 }
 .free-shipping .desc p {
-  color: #333;
+  color: var(--text-color);
 }
 
 .about {
-  background-color: #f9fbff;
+  background-color: var(--bg-color);
 }
 .about h2 {
   font-size: 40px;
   font-weight: bold;
-  color: #344161;
+  color: var(--heading-color);
 }
 @media (max-width: 1200px) {
   .about h2 {
@@ -508,8 +578,8 @@ header .icons svg:hover {
   line-height: 2;
   padding: 10px 0;
   font-size: 16px;
-  color: #333;
-  color: #333;
+  color: var(--text-color);
+  color: var(--text-color);
 }
 @media (max-width: 1200px) {
   .about p {
@@ -526,67 +596,12 @@ header .icons svg:hover {
 }
 
 .featured-products {
-  background-color: #f9fbff;
+  background-color: var(--bg-color);
   padding-bottom: 25px;
 }
 
-.bg-clr {
-  background-color: #f9fbff;
-}
-
-.product-card {
-  max-width: 250px !important;
-  padding: 0;
-  border-radius: 0;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  transition: 0.3s all ease;
-  background-color: #f9fbff;
-  color: #333;
-  position: relative;
-  width: 100%;
-  margin: auto;
-}
-.product-card .favorite svg {
-  color: #6616cb;
-}
-.product-card .favorite-heart {
-  position: absolute;
-  transition: 0.3s;
-  font-size: 20px;
-  color: #2872f8;
-  cursor: pointer;
-  right: 0;
-  top: 0;
-  width: 40px;
-  height: 40px;
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 5px;
-}
-.product-card .favorite-heart:hover {
-  transform: scale(1.1);
-}
-.product-card img {
-  border-radius: 0;
-}
-.product-card .card-title {
-  font-size: 17px;
-}
-.product-card:hover {
-  transform: translatey(-10px);
-}
-.product-card h5 {
-  font-weight: bold;
-}
-.product-card p {
-  text-align: center;
-}
-
 .timer {
-  background-color: #2872f8;
+  background-color: var(--main-color);
   max-width: 1049px;
   margin: auto;
   border-radius: 65px;
@@ -609,7 +624,7 @@ header .icons svg:hover {
   transition: 0.3s;
 }
 .timer .btn:hover {
-  border: solid 1px #2872f8;
+  border: solid 1px var(--main-color);
   color: black;
 }
 
@@ -622,6 +637,7 @@ header .icons svg:hover {
   }
 }
 /* -------------SHOP PAGE------------ */
+/* google fonts */
 .common-section {
   text-align: center;
   padding: 150px 0;
@@ -630,7 +646,7 @@ header .icons svg:hover {
   position: relative;
 }
 .common-section h1 {
-  color: white;
+  color: var(--text-color);
   font-weight: bold;
   z-index: 2;
   position: relative;
@@ -647,15 +663,17 @@ header .icons svg:hover {
 
 .filter-widget select {
   padding: 5px 10px;
-  border: solid 1px #2872f8;
+  border: solid 1px var(--main-color);
   border-radius: 5px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   cursor: pointer;
   width: 100%;
 }
 
 .search-box {
   width: 100%;
-  border: solid 1px #2872f8;
+  border: solid 1px var(--main-color);
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -665,6 +683,11 @@ header .icons svg:hover {
 .search-box input {
   border: 0;
   width: 100%;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+.search-box svg {
+  color: var(--text-color);
 }
 
 .product-image {
@@ -677,7 +700,7 @@ header .icons svg:hover {
   font-size: 14px;
 }
 .product-datails h2 {
-  color: #000;
+  color: var(--text-color);
 }
 @media (max-width: 992px) {
   .product-datails {
@@ -713,7 +736,7 @@ header .icons svg:hover {
   font-size: 18px;
 }
 .product-datails .buy-btn {
-  background-color: #2872f8;
+  background-color: var(--main-color);
   color: white;
   border-radius: 4px;
   border: 0;
@@ -750,12 +773,18 @@ header .icons svg:hover {
   font-size: 13px;
   font-weight: bold;
 }
+.reviews-and-desc .tab-content ul h6 {
+  color: var(--text-color);
+}
 .reviews-and-desc .tab-content ul p {
   color: #777;
   font-style: 14px;
   margin-top: 10px;
 }
 
+.review-form h4 {
+  color: var(--heading-color);
+}
 .review-form textarea,
 .review-form input {
   padding: 5px 20px;
@@ -783,6 +812,9 @@ header .icons svg:hover {
   }
 }
 /* -------------CART PAGE------------ */
+.table {
+  color: var(--text-color);
+}
 .table tr td img {
   width: 60px;
   -o-object-fit: contain;
@@ -792,8 +824,13 @@ header .icons svg:hover {
   cursor: pointer;
 }
 
+.no-items {
+  color: var(--text-color);
+}
+
 .sub-total {
   padding-top: 10px;
+  color: var(--text-color);
 }
 .sub-total h5 {
   display: flex;
@@ -810,14 +847,28 @@ header .icons svg:hover {
 }
 
 /* -------------CHECKOUT PAGE------------ */
-.billing-form input:focus {
+/* google fonts */
+.billing-form input {
+  color: var(--text-color);
+  background-color: var(--bg-color);
   outline: none;
   box-shadow: none;
 }
 
+.billing-form input:focus {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  outline: none;
+  box-shadow: none;
+}
+
+.billing {
+  color: var(--text-color);
+}
+
 .checkout-cart {
   padding: 20px;
-  background: linear-gradient(to right, #2872f8, #6616cb);
+  background: linear-gradient(to right, var(--main-color), var(--secondary-color));
   color: white;
   border-radius: 10px;
 }
@@ -841,8 +892,9 @@ header .icons svg:hover {
 }
 
 /* -------------LOGIN PAGE------------ */
+/* google fonts */
 .auth-btn {
-  background-color: #2872f8 !important;
+  background-color: var(--main-color) !important;
   color: white !important;
   padding: 7px 20px;
   margin-top: 20px;
@@ -859,9 +911,10 @@ header .icons svg:hover {
   font-weight: bold;
   font-size: 30px;
   margin-bottom: 14px;
+  color: var(--text-color);
 }
 .login-page .login-form {
-  background: linear-gradient(to right, #2872f8, #6616cb);
+  background: linear-gradient(to right, var(--main-color), var(--secondary-color));
   padding: 20px;
   border-radius: 10px;
 }
@@ -874,16 +927,17 @@ header .icons svg:hover {
   font-weight: bold;
 }
 .login-page p a:hover {
-  color: #2872f8;
+  color: var(--main-color);
 }
 
 /* --------------FOOTER------------ */
+/* google fonts */
 footer {
   /* Start Contact Section */
-  background-color: #f9fbff;
+  background-color: var(--bg-color);
 }
 footer .contact {
-  background-color: #f9fbff;
+  background-color: var(--bg-color);
 }
 footer .contact > .container {
   border-bottom: 1px solid #ddd;
@@ -896,10 +950,11 @@ footer .contact > .container {
 footer .row h3 {
   font-size: 20px;
   margin-bottom: 10px;
+  color: var(--heading-color);
 }
 footer .row p {
   font-size: 14px;
-  color: #333;
+  color: var(--text-color);
   margin-bottom: -4px;
 }
 footer .row form {
@@ -923,8 +978,8 @@ footer .row form textarea {
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #333;
-  background-color: #fff;
+  color: var(--text-color);
+  background-color: var(--bg-color);
   background-clip: padding-box;
   border: 1px solid #ddd;
   border-radius: 0;
@@ -943,8 +998,7 @@ footer .row form textarea::placeholder {
 }
 footer .row form input:focus,
 footer .row form textarea:focus {
-  color: #333;
-  background-color: #fff;
+  color: var(--text-color);
   border-color: #737373;
   outline: 0;
 }
@@ -966,7 +1020,7 @@ footer .row form textarea {
   margin: 10px 0;
 }
 footer .row form .btn {
-  background-color: #2872f8;
+  background-color: var(--main-color);
   color: white;
   width: -moz-fit-content;
   width: fit-content;
@@ -977,7 +1031,7 @@ footer .row form .btn {
   line-height: 1.5;
   position: relative;
   font-size: 14px;
-  background: linear-gradient(to right, #2872f8, #6616cb);
+  background: var(--gradient);
   padding: 12px 28px;
   overflow: hidden;
   z-index: 12;
@@ -990,12 +1044,12 @@ footer .row form .btn::before {
   right: 0;
   bottom: 0;
   left: 0;
-  background: linear-gradient(to right, #2872f8, #6616cb);
+  background: var(--gradient);
   transition: 0.3s linear;
 }
 footer .row form .btn:hover::before {
   border: 1px solid transparent;
-  border-color: #2872f8;
+  border-color: var(--main-color);
 }
 footer .row form .code {
   width: 120px;
@@ -1016,19 +1070,19 @@ footer .footer-lg h3 {
   font-size: 17px;
   margin-bottom: 15px;
   font-weight: bold;
-  color: #333;
+  color: var(--text-color);
 }
 footer .footer-lg ul li {
   padding: 3px 0;
   letter-spacing: 0.4px;
-  color: #333;
+  color: var(--text-color);
 }
 footer .footer-lg ul li a {
   font-size: 16px;
   transition: 0.4s color;
 }
 footer .footer-lg ul li a:hover {
-  color: #2872f8 !important;
+  color: var(--main-color) !important;
 }
 footer .footer-lg ul li svg {
   font-size: 18px;
@@ -1047,19 +1101,20 @@ footer.sm {
 }
 footer.sm .footer .accordion-item {
   background-color: transparent;
+  color: var(--text-color);
 }
 footer.sm .footer button {
   box-shadow: none !important;
   font-weight: bold;
   font-size: 16px;
-  color: #333;
+  color: var(--text-color);
   font-weight: bold;
   font-size: 18px;
   padding-left: 0;
   padding-right: 0;
 }
 footer.sm .footer button::after {
-  color: #333;
+  color: var(--text-color);
   background-color: unset;
 }
 footer.sm .footer button:not(.collapsed) {
@@ -1070,6 +1125,7 @@ footer.sm .footer button:not(.collapsed) {
 footer.sm .footer .accordion-body {
   padding-left: 0;
   padding-right: 0;
+  color: var(--text-color);
 }
 footer.sm .footer .accordion-body .image {
   width: 150px;
@@ -1081,7 +1137,7 @@ footer.sm .footer .accordion-body span {
   transition: 0.4s color;
 }
 footer.sm .footer .accordion-body span:hover {
-  color: #2872f8;
+  color: var(--main-color);
 }
 footer.sm .footer .accordion-body ul li {
   padding: 5px 0;
@@ -1091,11 +1147,11 @@ footer.sm .footer .accordion-body ul li a {
   font-size: 18px;
 }
 footer.sm .footer .accordion-body ul li:hover {
-  color: #2872f8;
+  color: var(--main-color);
 }
 footer.sm h3 {
   margin: 0;
-  color: #000;
+  color: var(--text-color);
   font-weight: bold;
   font-size: 18px;
   padding-top: 20px;

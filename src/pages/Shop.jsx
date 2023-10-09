@@ -109,7 +109,7 @@ const Shop = () => {
    <section>
     <Container>
      {productsData.length === 0 ? (
-      <h1 className="text-center">No Products Are Found !</h1>
+      <h1 className="text-center no-items">No Products Are Found !</h1>
      ) : (
       <ProductList data={productsData} />
      )}

@@ -1,13 +1,21 @@
-$main_color: #2872f8;
-$secondery_color: #6616cb;
-$bg_color: #f9fbff;
-$card_bg: #c8d5e8;
-// $bg_color: #0f172a;
-$text_color: #333;
-// $text_color: white;
-$heading_color: #344161;
-// $heading_color: #b9e0f2;
-// #2e548c
-$shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
-$gradient: linear-gradient(to right, $main-color, $secondery_color);
+:root {
+ --main-color: #2872f8;
+ --secondary-color: #6616cb;
+ --bg-color: #f9fbff;
+ --card-bg: #c8d5e8;
+ --text-color: #333;
+ --heading-color: #344161;
+ --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+ --gradient: linear-gradient(to right, #2872f8, #6616cb);
+}
+
+[data-theme="dark"] {
+    --bg-color: #0f172a;
+    --text-color: white;
+    --heading-color: #b9e0f2;
+//  var(--bg-color): #0f172a;
+//  var(--text-color): white;
+//  var(--heading-color): #b9e0f2;
+ // #2e548c
+}

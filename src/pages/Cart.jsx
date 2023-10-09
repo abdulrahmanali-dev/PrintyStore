@@ -20,7 +20,7 @@ const Cart = () => {
      <Row>
       <Col lg="8">
        {cartItems.length === 0 ? (
-        <h2>No Items Added</h2>
+        <h2 className="no-items">No Items Added</h2>
        ) : (
         <table className="table bordered">
          <thead>

@@ -1,117 +1,121 @@
 // Variables
 @use "../variables" as *;
 a {
-  transition: 0.3s;
+ transition: 0.3s;
 }
 header {
-  position: fixed;
-  top: 0;
-  // background-color: #333;
-  background-color: $bg_color;
+ position: fixed;
+ top: 0;
+ // background-color: #333;
+ background-color: var(--bg-color);
 
-  // background-color: #0f172a;
-  right: 0;
-  left: 0;
-  z-index: 1000;
-  padding: 0;
-  @media (min-width:567px) {
-    padding: 2px 9%;
+ // background-color: #0f172a;
+ right: 0;
+ left: 0;
+ z-index: 1000;
+ padding: 0;
+ @media (min-width: 567px) {
+  padding: 2px 9%;
+ }
+ .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+ box-shadow: 0 2px 0.5rem rgba(0, 0, 0, 0.1);
+ width: 100%;
+ .logo {
+  height: 70px;
+ }
+ .navbar-menu {
+  a {
+   color: var(--text-color);
+   font-weight: bold;
+   font-size: 15px;
+   padding: 0 15px;
+   &:hover,
+   &.active {
+    color: var(--main-color);
+    color: var(--main-color);
+   }
   }
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+ }
+ .icons {
+  display: flex;
+  justify-content: center;
+  .icon {
+   position: relative;
+   span {
+    position: absolute;
+    top: -6px;
+    right: 10px;
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 50%;
+    width: 15px;
+    text-align: center;
+    line-height: 1.3;
+    font-size: 11px;
+    font-weight: bold;
+    height: 15px;
+   }
   }
-  box-shadow: 0 2px 0.5rem rgba(0, 0, 0, 0.1);
-  width: 100%;
-  .logo {
-    height: 70px;
+  img {
+   width: 30px;
   }
-  .navbar-menu {
-    a {
-      color: $text_color;
-      font-weight: bold;
-      font-size: 15px;
-      padding: 0 15px;
-      &:hover,
-      &.active {
-        color: $main-color;
-        color: $main-color;
-      }
-    }
+  #menu-bars,
+  svg {
+   color: var(--main-color);
+   border-radius: 5px;
+   margin-right: 10px;
+   @media (max-width:992px) {
+       margin-right: 5px;
+    
+   }
+   display: flex;
+   padding: 5px 10px;
+   text-transform: lowercase;
+   font-size: 20px;
+   font-weight: bold;
+   text-align: center;
+   transition: 0.2s;
   }
-  .icons {
-    display: flex;
-    justify-content: center;
-    .icon {
-      position: relative;
-      span {
-        position: absolute;
-        top: -6px;
-        right: 10px;
-        background-color: $main-color;
-        color: white;
-        border-radius: 50%;
-        width: 15px ;
-        text-align: center;
-        line-height: 1.3;
-        font-size: 11px;
-        font-weight: bold;
-        height: 15px ;
-      }
-    }
-    img {
-      width: 30px;
-    }
-    #menu-bars,
-    svg {
-      color: $main-color;
-      margin-right: 10px;
-      border-radius: 5px;
-      display: flex;
-      padding: 5px 10px;
-      text-transform: lowercase;
-      font-size: 20px;
-      font-weight: bold;
-      text-align: center;
-      transition: 0.2s;
-    }
-    #menu-bars {
-      display: none;
-    }
-    #menu-bars:hover,
-    svg:hover {
-      color: #fff;
-      background-color: $secondery-color;
-    }
+  #menu-bars {
+   display: none;
   }
+  #menu-bars:hover,
+  svg:hover {
+   color: #fff;
+   background-color: var(--secondary-color);
+  }
+ }
 }
 
 @media (max-width: 768px) {
-  header .icons #menu-bars {
-    display: block;
-  }
-  header .navbar-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: $bg_color;
-    border-top: solid 2px #999;
-    border-bottom: solid 2px #999;
-    transition: 0.2s linear;
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    display: block;
-  }
-  header .navbar-menu.active {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-  }
-  header .navbar-menu a {
-    display: block;
-    padding: 20px;
-    margin: 10px;
-    border: 2px solid #999;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-  }
+ header .icons #menu-bars {
+  display: block;
+ }
+ header .navbar-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--bg-color);
+  border-top: solid 2px #999;
+  border-bottom: solid 2px #999;
+  transition: 0.2s linear;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  display: block;
+ }
+ header .navbar-menu.active {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+ }
+ header .navbar-menu a {
+  display: block;
+  padding: 20px;
+  margin: 10px;
+  border: 2px solid #999;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+ }
 }

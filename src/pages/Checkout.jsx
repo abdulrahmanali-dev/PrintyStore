@@ -12,7 +12,7 @@ const Checkout = () => {
    <Container>
     <Row className="mt-5">
      <Col lg="8">
-      <h2 className="mb-3 ">Billing</h2>
+      <h1 className="mb-3 billing">Billing</h1>
       <Form className="billing-form">
        <FormGroup>
         <Input placeholder="Enater your name" type="text" />

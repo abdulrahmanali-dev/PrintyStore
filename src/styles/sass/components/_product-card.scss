@@ -1,0 +1,56 @@
+// Variables
+@use "../variables" as *;
+// Product Card
+.bg-clr {
+ background-color: var(--bg-color);
+}
+.product-card {
+ max-width: 250px !important;
+ padding: 0;
+ border-radius: 0;
+ box-shadow: var(--shadow);
+ transition: 0.3s all ease;
+ background-color: var(--bg-color);
+ color: var(--text-color);
+ position: relative;
+ width: 100%;
+ margin: auto;
+ .favorite svg {
+  color: var(--secondary-color);
+ }
+ .favorite-heart {
+  position: absolute;
+  transition: 0.3s;
+  font-size: 20px;
+  color: #2872f8;
+  cursor: pointer;
+  right: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  &:hover {
+   transform: scale(1.1);
+  }
+ }
+ img {
+  border-radius: 0;
+ }
+ .card-title {
+  font-size: 17px;
+ }
+ &:hover {
+  transform: translatey(-10px);
+ }
+ h5 {
+  font-weight: bold;
+ }
+ p {
+  text-align: center;
+ }
+}
