@@ -762,6 +762,9 @@ header .icons svg:hover {
 .reviews-and-desc .tab-content {
   padding: 30px 5px;
 }
+.reviews-and-desc .tab-content p {
+  color: var(--text-color);
+}
 .reviews-and-desc .tab-content ul {
   padding: 0;
 }
@@ -791,6 +794,7 @@ header .icons svg:hover {
   width: 100%;
   border-radius: 8px;
   border: solid 1px #ccc;
+  background-color: var(--bg-color);
 }
 .review-form span {
   color: coral;

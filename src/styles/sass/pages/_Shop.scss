@@ -123,6 +123,9 @@
  }
  .tab-content {
   padding: 30px 5px;
+  p {
+    color: var(--text-color);
+  }
   ul {
    padding: 0;
    li {
@@ -154,6 +157,7 @@
   width: 100%;
   border-radius: 8px;
   border: solid 1px #ccc;
+  background-color: var(--bg-color);
  }
  span {
   color: coral;
