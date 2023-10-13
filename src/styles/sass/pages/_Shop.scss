@@ -8,7 +8,7 @@
  background-position: center;
  position: relative;
  h1 {
-  color: var(--text-color);
+  color: white;
   font-weight: bold;
   z-index: 2;
   position: relative;
@@ -157,6 +157,7 @@
   width: 100%;
   border-radius: 8px;
   border: solid 1px #ccc;
+  color: var(--text-color);
   background-color: var(--bg-color);
  }
  span {

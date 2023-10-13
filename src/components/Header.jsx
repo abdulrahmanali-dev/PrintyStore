@@ -61,7 +61,7 @@ const Header = () => {
       <span>{totalQuantity}</span>
      </div>
      <UncontrolledDropdown>
-      <DropdownToggle color="white !important" className="border-0 p-0 me-2">
+      <DropdownToggle color="white" className="border-0 p-0 me-2">
        <motion.img whileTap={{ scale: 1.1 }} src={userImg} alt="user" />
       </DropdownToggle>
       <DropdownMenu end>

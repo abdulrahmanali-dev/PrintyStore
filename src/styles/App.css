@@ -646,7 +646,7 @@ header .icons svg:hover {
   position: relative;
 }
 .common-section h1 {
-  color: var(--text-color);
+  color: white;
   font-weight: bold;
   z-index: 2;
   position: relative;
@@ -794,6 +794,7 @@ header .icons svg:hover {
   width: 100%;
   border-radius: 8px;
   border: solid 1px #ccc;
+  color: var(--text-color);
   background-color: var(--bg-color);
 }
 .review-form span {
