@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../assets/images/logo.webp";
+import { Link } from "react-router-dom";
 const Footer = () => {
  return (
   <div>
@@ -62,8 +63,7 @@ const Footer = () => {
          </div>
         </a>
         <p>
-         Educational, entertainment, fun website, we believe that the have
-         useful and enjoyable time with us.
+        Dive into PRINTY STORE, your one-stop destination for vibrant stickers and intricate figures. Explore our diverse collection and let your creativity soar to new heights!
         </p>
         <span>
          <a class="hover" href="mailto:info@poll2know.com">
@@ -74,15 +74,15 @@ const Footer = () => {
        <div class="col-2">
         <h3>Sections</h3>
         <ul class="list-unstyled">
-         <li>
-          <a href="#"> Exams </a>
-         </li>
-         <li>
-          <a href="#"> Polls </a>
-         </li>
-         <li>
-          <a href="#"> Catagories </a>
-         </li>
+          <li>
+           <Link to='/shop'> Products</Link>
+          </li>
+          <li>
+           <Link to='/cart'> Cart</Link>
+          </li>
+          <li>
+           <Link to='/checkout'> Checkout</Link>
+          </li>
         </ul>
        </div>
        <div class="col-2">
@@ -133,7 +133,7 @@ const Footer = () => {
           </a>
          </li>
          <li>
-          <a href="#">
+          <a href="https://www.instagram.com/printy_sy/" target="_blank">
            <i class="fab fa-instagram"></i>Instagram
           </a>
          </li>
@@ -178,9 +178,7 @@ const Footer = () => {
           <img className="logo-footer" src={logo} alt="logo" />
          </div>
          <p>
-          Educational, entertainment, fun website, we believe that the best way
-          to learn are entertainment and fun ... We wish you have useful and
-          enjoyable time with us.
+         Dive into PRINTY STORE, your one-stop destination for vibrant stickers and intricate figures. Explore our diverse collection and let your creativity soar to new heights!
          </p>
          <span>
           <a href="mailto:info@poll2know.com">info@poll2know.com</a>
@@ -210,13 +208,13 @@ const Footer = () => {
         <div class="accordion-body">
          <ul class="list-unstyled">
           <li>
-           <a href="#"> Exams </a>
+           <Link to='/shop'> Products</Link>
           </li>
           <li>
-           <a href="#"> Polls </a>
+           <Link to='/cart'> Cart</Link>
           </li>
           <li>
-           <a href="#"> Catagories </a>
+           <Link to='/checkout'> Checkout</Link>
           </li>
          </ul>
         </div>
@@ -349,7 +347,7 @@ const Footer = () => {
         >
          <i class="fab fa-facebook"></i>
         </a>
-        <a href="#">
+        <a href="https://www.instagram.com/printy_sy/" target="_blank">
          <i class="fab fa-instagram"></i>
         </a>
         <a href="#">
